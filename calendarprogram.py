@@ -3,7 +3,6 @@ userChoice = input ("Welcome! \n \nPlease chose an option by entering the number
 while userChoice != '1' and userChoice != '2' and userChoice != '3' and userChoice != '4':
     print ("\nSorry, I didn't quite get that ")
     userChoice = input ("Choice: ")
-    break
     
 if userChoice == ("1"):
     print ("")

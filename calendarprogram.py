@@ -7,6 +7,15 @@ while userChoice != '1' and userChoice != '2' and userChoice != '3' and userChoi
 if userChoice == ("1"):
     print ("")
     print ("You have chosen to view all calendar entries")
+    print ("--------------------------------------------")
+    print ("")
+
+    f = open("calendar.txt", "r")
+    calendarContents = f.read()
+    
+    print ("Entry   Date            Event")
+    print (calendarContents)
+    f.close()
 
 elif userChoice == ("2"):
     print ("")
@@ -20,6 +29,3 @@ elif userChoice == ("4"):
     print ("This program will now close")
     print ("Thank you for using this program")
     exit()
-    
-else:
-    print ("")

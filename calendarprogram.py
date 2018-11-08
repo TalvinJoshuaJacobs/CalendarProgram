@@ -13,14 +13,20 @@ if userChoice == ("1"):
     f = open("calendar.txt", "r")
     calendarContents = f.read()
     
-    print ("Entry   Date            Event")
+    print ("Entry Number, Date, Event")
+    print ("")
     print (calendarContents)
     f.close()
 
 elif userChoice == ("2"):
     print ("")
     print ("You have chosen to write new entries into the calendar")
+    print ("------------------------------------------------------")
+    print ("")
 
+    f = open("calendar.txt", "r+")
+    f.close()
+    
 elif userChoice == ("3"):
     print ("")
     print ("You have chosen to edit existing calendar entries")

@@ -1,0 +1,3 @@
+1 2018-11-05 "Go to college to start Project 3" %
+2 2018-11-08 "Go to chess match" %
+3 2018-12-25 "Pagan Holiday" %

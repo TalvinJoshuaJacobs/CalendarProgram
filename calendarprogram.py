@@ -13,9 +13,8 @@ if userChoice == ("1"):
     f = open("calendar.txt", "r")
     calendarContents = f.read()
     
-    print ("Date, Event")
-    print ("")
     print (calendarContents)
+    print ("")
     f.close()
 
 elif userChoice == ("2"):
@@ -25,9 +24,13 @@ elif userChoice == ("2"):
     print ("")
 
     f = open("calendar.txt", "a")
+
+    newEntryID = input ("Please enter a new entry ID ")
+    f.write("\n")
+    f.write(newEntryID)
     
     newYear = input ("Please enter the Year ")
-    f.write("\n")
+    f.write("         ")
     f.write(newYear)
     
     newMonth = input ("Please enter the Month ")
@@ -39,8 +42,8 @@ elif userChoice == ("2"):
     f.write(newDay)
 
     print ("\n")
-    newEvent = input ("What event would you like to add to this day? ")
-    print ("\n")
+    newEvent = input ("What event would you like to add? ")
+    print ("")
     f.write("     ")
     f.write(newEvent)
     print ("Done!")
@@ -50,6 +53,16 @@ elif userChoice == ("2"):
 elif userChoice == ("3"):
     print ("")
     print ("You have chosen to edit existing calendar entries")
+    print ("-------------------------------------------------")
+    print ("")
+
+    f = open("calendar.txt", "a")
+    eventEdit = input ("Please enter the position of the calendar you want to edit ")
+    f.seek(eventEdit)
+    madeChanges = input ("Please enter an updated version of the event")
+    f.write(madeChanges)
+    print ("Done!")
+    f.close()
     
 elif userChoice == ("4"):
     print ("This program will now close")

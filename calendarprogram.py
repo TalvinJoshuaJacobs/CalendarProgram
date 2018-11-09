@@ -13,7 +13,7 @@ if userChoice == ("1"):
     f = open("calendar.txt", "r")
     calendarContents = f.read()
     
-    print ("Entry Number, Date, Event")
+    print ("Date, Event")
     print ("")
     print (calendarContents)
     f.close()
@@ -24,7 +24,27 @@ elif userChoice == ("2"):
     print ("------------------------------------------------------")
     print ("")
 
-    f = open("calendar.txt", "r+")
+    f = open("calendar.txt", "a")
+    
+    newYear = input ("Please enter the Year ")
+    f.write("\n")
+    f.write(newYear)
+    
+    newMonth = input ("Please enter the Month ")
+    f.write("-")
+    f.write(newMonth)
+
+    newDay = input ("Please enter the Day ")
+    f.write("-")
+    f.write(newDay)
+
+    print ("\n")
+    newEvent = input ("What event would you like to add to this day? ")
+    print ("\n")
+    f.write("     ")
+    f.write(newEvent)
+    print ("Done!")
+    
     f.close()
     
 elif userChoice == ("3"):

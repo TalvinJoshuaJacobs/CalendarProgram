@@ -69,10 +69,10 @@ elif userChoice == ("3"):
 
         lineNumber = eventeditInteger + 1
 
-        f = open ("calendar.txt")
+        f = open ("calendar.txt" , "r")
         lines = f.readlines()
         print (lines[lineNumber])
-
+        print ("")
         
     else:
         print ("This entry does NOT exist")

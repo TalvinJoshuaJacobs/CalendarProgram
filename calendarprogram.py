@@ -25,7 +25,7 @@ elif userChoice == ("2"):
 
     f = open("calendar.txt", "a")
 
-    newEntryID = input ("Please enter a new entry ID ")
+    newEntryID = input ("Please enter a new entry number ")
     f.write("\n")
     f.write(newEntryID)
     
@@ -56,13 +56,22 @@ elif userChoice == ("3"):
     print ("-------------------------------------------------")
     print ("")
 
-    f = open("calendar.txt", "a")
-    eventEdit = input ("Please enter the position of the calendar you want to edit ")
-    f.seek(eventEdit)
-    madeChanges = input ("Please enter an updated version of the event")
-    f.write(madeChanges)
-    print ("Done!")
-    f.close()
+    eventEdit = input ("Please enter the entry number that corresponds to the event you with to edit ")
+    eventEdit = str(eventEdit)
+
+    if eventEdit in open ("calendar.txt").read():
+        print ("")
+        print ("This entry does exist")
+        print ("You have chosen to edit the entry with ID" , eventEdit)
+        print ("")
+        print ("This is the entry you wish to edit:")
+
+        
+    else:
+        print ("This entry does NOT exist")
+        print ("Please try again")
+
+    
     
 elif userChoice == ("4"):
     print ("This program will now close")

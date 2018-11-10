@@ -1,5 +1,5 @@
-EntryID   Date           Event
--------   ----           -----
+EntryID    Date           Event
+-------    ----           -----
 N1         2018-11-05     Go to college to start Project 3
 N2         2018-11-08     Go to chess match
 N3         2018-12-25     Pagan Holiday

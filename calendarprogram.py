@@ -56,15 +56,22 @@ elif userChoice == ("3"):
     print ("-------------------------------------------------")
     print ("")
 
-    eventEdit = input ("Please enter the entry number that corresponds to the event you with to edit ")
-    eventEdit = str(eventEdit)
+    eventEdit = input ("Please enter the Entry ID that corresponds to the event you with to edit ")
+    eventeditString = str(eventEdit)
+    eventeditInteger = int(eventEdit)
 
     if eventEdit in open ("calendar.txt").read():
         print ("")
         print ("This entry does exist")
-        print ("You have chosen to edit the entry with ID" , eventEdit)
+        print ("You have chosen to edit the entry in line number" , eventeditString)
         print ("")
         print ("This is the entry you wish to edit:")
+
+        lineNumber = eventeditInteger + 1
+
+        f = open ("calendar.txt")
+        lines = f.readlines()
+        print (lines[lineNumber])
 
         
     else:

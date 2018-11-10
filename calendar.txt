@@ -1,3 +1,10 @@
-1 2018-11-05 "Go to college to start Project 3" %
-2 2018-11-08 "Go to chess match" %
-3 2018-12-25 "Pagan Holiday" %
+EntryID   Date           Event
+-------   ----           -----
+N1         2018-11-05     Go to college to start Project 3
+N2         2018-11-08     Go to chess match
+N3         2018-12-25     Pagan Holiday
+N4         2020-07-29     20th birthday
+N5         2021-07-29     21st birthday
+N6         2030-11-04     Does this even exist?
+N7         3000-10-07     Surely this cannot exist
+N8         2012-07-15     London Olympics

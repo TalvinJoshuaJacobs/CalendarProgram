@@ -76,7 +76,8 @@ elif userChoice == ("3"):
         
     else:
         print ("This entry does NOT exist")
-        print ("Please try again")
+        print ("Goodbye!")
+        exit()
 
     
     

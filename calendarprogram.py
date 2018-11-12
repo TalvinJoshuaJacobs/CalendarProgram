@@ -1,3 +1,4 @@
+import linecache
 userChoice = input ("Welcome! \n \nPlease chose an option by entering the number that corresponds to your choice: \n 1 View all calendar entries \n 2 Write new entries into the calendar \n 3 Edit existing entries \n 4 Exit the program \n \nChoice: ")
 
 while userChoice != '1' and userChoice != '2' and userChoice != '3' and userChoice != '4':
@@ -47,7 +48,8 @@ elif userChoice == ("2"):
     f.write("     ")
     f.write(newEvent)
     print ("Done!")
-    
+    print ("")
+    print ("Goodbye!")
     f.close()
     
 elif userChoice == ("3"):
@@ -67,17 +69,50 @@ elif userChoice == ("3"):
         print ("")
         print ("This is the entry you wish to edit:")
 
-        lineNumber = eventeditInteger + 1
+        lineNumber = eventeditInteger + 2
 
-        f = open ("calendar.txt" , "r")
-        lines = f.readlines()
-        print (lines[lineNumber])
+        f = open ("calendar.txt" , "r+")
+        print (linecache.getline("calendar.txt" , lineNumber , module_globals=None))
         print ("")
+
+        neweditedYear = input ("Please enter a new year for this entry ")
+        neweditedMonth = input ("Please enter a new month for this entry ")
+        neweditedDay = input ("Please enter a new day for this entry ")
+        neweditedEvent = input ("Please enter a new event for this entry ")
+
+        for i in range(lineNumber - 1):
+            readLine = f.readline()
+            lengthofLine = len (readLine)
+        # print(f.readline())
+
+        f.seek(-lengthofLine)
+
+        f.write(eventeditString)
+        f.write("         ")
+        f.write(neweditedYear)
+        f.write("-")
+        f.write(neweditedMonth)
+        f.write("-")
+        f.write(neweditedDay)
+        f.write("     ")
+        f.write(neweditedEvent)
+
+        print("")
+        print("Done!")
+        
+
+
+        print ("")
+
+        f.close()
+        
+
+
         
     else:
         print ("This entry does NOT exist")
         print ("Goodbye!")
-        exit()
+
 
     
     

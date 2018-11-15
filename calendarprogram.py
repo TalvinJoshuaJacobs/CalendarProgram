@@ -104,6 +104,8 @@ elif userChoice == ("3"):
         
     else:
         print ("This entry does NOT exist")
+        print ("The program will now exit")
+        exit()
     
 elif userChoice == ("4"):
     print ("This program will now close")

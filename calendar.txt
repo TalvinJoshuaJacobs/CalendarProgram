@@ -3,9 +3,9 @@ EntryID   Date           Event
 1         2018-11-05     Go to college to start Project 3
 2         2018-11-08     Go to chess match
 3         2018-12-25     Pagan Holiday
-4         2020-07-29     20th birthday
-5         2021-07-29     21st birthday
-6         2030-11-04     Does this even exist?
-7         3000-10-07     Surely this cannot exist
-8         2012-07-15     London Olympics
+4         2020-08-28     Olympics
+5         2021-07-28     Stay-at-home-day
+6         2030-11-04     The future
+7         3000-10-07     Way beyond me
+8         2012-07-15     London olympics
 9         2019-07-29     19th Birthday

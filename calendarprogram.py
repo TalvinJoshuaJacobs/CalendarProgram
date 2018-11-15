@@ -87,7 +87,6 @@ elif userChoice == ("3"):
 
         f.seek(f.tell() -lengthofLine)
 
-        f.write(eventeditString)
         f.write("         ")
         f.write(neweditedYear)
         f.write("-")
@@ -100,22 +99,11 @@ elif userChoice == ("3"):
 
         print("")
         print("Done!")
-        
-
-
-        print ("")
 
         f.close()
         
-
-
-        
     else:
         print ("This entry does NOT exist")
-
-
-
-    
     
 elif userChoice == ("4"):
     print ("This program will now close")

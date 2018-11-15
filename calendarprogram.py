@@ -65,7 +65,7 @@ elif userChoice == ("3"):
     if eventEdit in open ("calendar.txt").read():
         print ("")
         print ("This entry does exist")
-        print ("You have chosen to edit the entry in line number" , eventeditString)
+        print ("You have chosen to edit the entry number" , eventeditString)
         print ("")
         print ("This is the entry you wish to edit:")
 
@@ -80,12 +80,12 @@ elif userChoice == ("3"):
         neweditedDay = input ("Please enter a new day for this entry ")
         neweditedEvent = input ("Please enter a new event for this entry ")
 
-        for i in range(lineNumber - 1):
+        for i in range(lineNumber):
             readLine = f.readline()
             lengthofLine = len (readLine)
         # print(f.readline())
 
-        f.seek(-lengthofLine)
+        f.seek(f.tell() -lengthofLine -1)
 
         f.write(eventeditString)
         f.write("         ")

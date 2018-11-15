@@ -85,7 +85,7 @@ elif userChoice == ("3"):
             lengthofLine = len (readLine)
         # print(f.readline())
 
-        f.seek(f.tell() -lengthofLine -1)
+        f.seek(f.tell() -lengthofLine)
 
         f.write(eventeditString)
         f.write("         ")
@@ -96,6 +96,7 @@ elif userChoice == ("3"):
         f.write(neweditedDay)
         f.write("     ")
         f.write(neweditedEvent)
+        f.write("\n")
 
         print("")
         print("Done!")
@@ -111,7 +112,7 @@ elif userChoice == ("3"):
         
     else:
         print ("This entry does NOT exist")
-        print ("Goodbye!")
+
 
 
     

@@ -25,7 +25,7 @@
 
  - "As a user, I would want to chose an option between reading, writing and editing existing entries"
  - "As a user, I would want the program to interact with a text file called 'calendar' located in the same directory"
- - "As a user, I would want to read all of the calendar entries"
+ - "As a user, I would want to be able to read all of the calendar entries"
  - "As a user, I would want to have the calendar entries presented to me in a readable and clear format"
  - "As a user, I would want to add any entry to the calendar"
  - "As a user, I would want to edit any existing entry I chose"
@@ -45,42 +45,53 @@ A GUI-less, command line utility program
 
 ##### Platform
 
-The program was coded in the Python IDLE Shell. It was useful for fixing problems in my code.
+The program was coded in the Python IDLE Shell. It was useful for fixing problems in the code, by providing   easy-to-read feedback on which line(s) were problematic.
 
 ##### Programming Language/Environment
 
+Python IDLE 3.7
 
 ##### Programming Challenges
-State the programing challenges you are trying to overcome
+
+There were several programing challenges that were faced during the implementation of the code. The main challenge was getting started, due to the fact that there were so few restrictions placed on the task. Another challenge was getting the program to interact with the text file the way it needed to, without any errors or formatting issues involved. Another challenge was letting the program edit the text file the way it needed to.
  
 ##### Constructing And Implementing My Code
 
-Think of this as the method. How will you go about building your program?
+To overcome the main challenge, giving the user the option to chose between writing, reading and editing the text file was the starting point (using if statements). Then, the different functional requirements were built onto that part, followed by the non-functional requirements. After the user was given a choice, a while loop was placed on top of that to re-ask the question if the user enters an incorrect input. Then, each 'choice' was built on, starting with the reading of the file, then the appending to the file, followed by the editing of the file.
 
 ##### Algorithms
 
-Explanation of the algorithms behind your program
+The first algorithm present in the program is responsible for the user's choice between viewing, adding and editing existing calendar entries. It uses a while loop and an if statement to lead the user to what they wish to do.
+Another algorithm in the program is responsible for file management. Each user choice leads to a file being opened for reading/writing/appending using the `f.read()` , `f.write()` and `f.seek()` functions.
  
 ##### Coding Standards 
-Standard for the code you will be writting 
+The following coding standards were adhered to when completing the code:
+
+-   Using camelCase for variable and function names
+-   The variable names and cases are consistent
+-   The code is readable
+-   The spacing, indentation, comments and brackets are consistent
 
 ### V. Research
+
+The only research conducted was for finding out how to efficiently seek any line in a text file. This was done by using the `linecache` module built into Python. This allows one to get any line from a Python source file, while attempting to optimize internally, using a cache, the common case where many lines are read from a single file.
+This module was discovered in the official Python documentation found online: https://docs.python.org/3.7/library/linecache.html
 
 ### VI. Project Management
 
 ##### Burndown Chart
 
-![Example Burndown Chart](https://upload.wikimedia.org/wikipedia/commons/8/8e/SampleBurndownChart.svg)
+![](https://i.imgur.com/sasXhWB.jpg)
 
 Chart showing the completion of user stories over time
 
 ##### User Stories Tracking Chart (Which Stories Have Been Completed)
 
-Table showing user stories with weighting, due date and completion state
+![](https://i.imgur.com/9vpVP0p.jpg)
 
 ##### Flowchart
 
-Flowchart showing how the program will work
+![enter image description here](https://i.imgur.com/l7wfmDO.jpg)
 
 ##### Functions
 

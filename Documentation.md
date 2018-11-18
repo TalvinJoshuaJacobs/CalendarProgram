@@ -74,7 +74,8 @@ The following coding standards were adhered to when completing the code:
 
 ### V. Research
 
-The only research conducted was for finding out how to efficiently seek any line in a text file. This was done by using the `linecache` module built into Python. This allows one to get any line from a Python source file, while attempting to optimize internally, using a cache, the common case where many lines are read from a single file.
+The only research conducted was for finding out how to efficiently seek any line in a text file. This was done by using the `linecache` module built into Python. 
+
 This module was discovered in the official Python documentation found online: https://docs.python.org/3.7/library/linecache.html
 
 ### VI. Project Management
@@ -95,4 +96,21 @@ Chart showing the completion of user stories over time
 
 ##### Functions
 
-Descriptions of functions given on flowchart
+ - "Open calendar.txt for reading": Using an in-built command to tell Python to open the calendar text file for reading which is located in the same directory. `f = open("calendar.txt", "r")` 
+ - "Open calendar.txt for reading and writing": Does the same as explained above, but also allows python to overwrite any existing information located in the file itself. `f = open("calendar.txt", "r+")`
+ - "Open calendar.txt for appending": Uses the 'a' to tell Python to only add to the text file. (Nothing gets overwritten). `f = open("calendar.txt", "a")`
+ - "Read the contents of calendar.txt": Tells Python to read everything contained in the text file. `calendarContents = f.read()`
+ - "close calendar.txt": Closes the calendar after it has been opened. This must be done to prevent the files from staying open after the program is closed, which can lead to memory leaks etc. `f.close()
+ - "Write down the entry number, year, month, day and entry into the text file in fitting format": Once the user inputs have been received, they will written down into the text file using `f.write()`
+ - "Write over the old line with the new line containing the new information in the fitting format": Also uses the same function `f.write()` , but first, the program needs to go to the line that needs to be edited by using a for loop to convert the text file into a list (shown below): 
+`for i in range(lineNumber):    readLine = f.readline()    lengthofLine = len (readLine)`
+
+### VII. Evaluation
+
+I have managed to complete all of the functional requirements and get this program to work properly without any issues or errors. Almost all of it was completed without any outside assistance whatsoever. This is the reason why the code is made up from many basic ideas. There is definitely another way to implement all of the functional requirements more efficiently, however that would require a lot more time for me to pull off.
+After beginning with giving the user 4 options, I began to work a lot faster and more efficiently, because that is what became the basic structure of the code. 
+
+Some non-functional requirements were also implemented. The user is prompted to enter their input again if their first input didn't properly chose an option -  this seemed necessary to input, as it is often the case where the user can miss-type their option or misunderstand the question that they are being prompted with. Another non-functional requirement featured in the program is the presentation of the prompts in the command-line. ASCII text was used in occasions to de-clutter the screen and make the program more user friendly.
+
+Python was used because it has not been used in any other project before, and also it appeared to be the most fitting language to use, as the syntax was very basic, and also fixing errors was easy due to the feedback that the Python shell provided me with.
+

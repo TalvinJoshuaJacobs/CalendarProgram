@@ -47,6 +47,9 @@ A GUI-less, command line utility program
 
 The program was coded in the Python IDLE Shell. It was useful for fixing problems in the code, by providing   easy-to-read feedback on which line(s) were problematic.
 
+![
+](https://i.imgur.com/UDDuj6h.png)
+
 ##### Programming Language/Environment
 
 Python IDLE 3.7
